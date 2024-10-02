@@ -6,36 +6,65 @@
   <title>Random Quote Generator</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       text-align: center;
-      margin-top: 100px;
-      background: linear-gradient(to right, #74ebd5, #acb6e5); /* Gradient background */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to right, #6a11cb, #2575fc); /* Enhanced gradient background */
+      color: #fff;
     }
+    
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    
     .quote {
-      font-size: 24px;
+      font-size: 28px;
       margin: 20px;
-      color: #333;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+      border: 2px solid #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      color: #f0f0f0;
+      transition: transform 0.3s;
     }
+
+    .quote:hover {
+      transform: translateY(-10px); /* Slight lift when hovered */
+    }
+
     button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin: 5px;
+      padding: 15px 25px;
+      font-size: 18px;
+      margin-top: 20px;
       border: none;
-      border-radius: 5px;
-      background-color: #3498db;
+      border-radius: 25px;
+      background-color: #ff6f61; /* Soft red-orange button color */
       color: white;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s; /* Added transform effect */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
     }
+    
     button:hover {
-      background-color: #2980b9;
-      transform: scale(1.05); /* Slightly enlarge button on hover */
+      background-color: #e64e4a;
+      transform: scale(1.1); /* Larger scale for better emphasis */
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Deeper shadow effect */
     }
+
+    button:active {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Revert to lighter shadow on click */
+    }
+
   </style>
 </head>
 <body>
